@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>taskManager</title>
+	<link
+		href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="src/styles.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header">
+			<div class="header-title">
+				<h1>Task Manager</h1>
+			</div>
+
+			<div class="header-form">
+				<form action="" name="myForm" class="form-item" autocomplete="off">
+					<div><input type="text" placeholder="New task" id="inputArea" maxlength="70" />
+						<div class="form-error"></div>
+					</div>
+					<div><input class="add" type="submit" value="Add" id="addButton"></div>
+
+				</form>
+			</div>
+		</header>
+
+		<div class="task-list">
+			<ul id="myList">
+
+			</ul>
+		</div>
+	</div>
+
+	<script src="src/index.js"></script>
+</body>
+
+</html>

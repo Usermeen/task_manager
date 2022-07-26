@@ -1,0 +1,247 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+	list-style-type: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+body{
+	font-family: 'Roboto';
+	background-color: rgb(231, 250, 224);
+}
+
+.wrapper {
+	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	text-align: center;
+}
+.header {
+	width: 100%;
+	margin: 0 auto;
+	background-color: rgb(73 171 233);
+}
+.header-title {
+	cursor: default;
+	margin-top: 20px;
+}
+#inputArea{
+	
+	font-size: 16px;
+	min-width: 300px;
+	height: 40px;
+	border-radius: 2px;
+	box-shadow: 3px -2px 8px -3px #72A389;
+
+}
+.add{
+	cursor: pointer;
+	font-size: 16px;
+	height: 40px;
+	min-width:100px;
+	box-shadow: 3px -2px 8px -3px #72A389;
+	border-radius: 2px;
+	background-color: rgb(172, 172, 172);
+}
+.add-none-hover{
+	cursor: pointer;
+	font-size: 16px;
+	height: 40px;
+	min-width:100px;
+	box-shadow: 3px -2px 8px -3px #72A389;
+	border-radius: 2px;
+	background-color: rgb(172, 172, 172);
+}
+.add:hover{
+	background-color: rgb(167, 253, 128);
+}
+
+.header-form{
+	min-height: 30px;
+	font-size: 0;
+}
+.form-item{	
+	display: flex;
+	justify-content: center;
+	margin: 20px 0 10px 0;
+}
+.form-error{
+	height: 20px;
+	cursor: default;
+	font-size: 14px;
+	text-align: start;
+	color: red;
+}
+.task-list {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.task-list li{
+	position: relative;
+	background-color: rgba(255, 255, 0, 0.901);
+	padding: 5px 0;
+	list-style-type: none;
+	border: 1px solid #72A389;
+	border-radius: 2px;
+}
+.task-list li:hover{
+	background-color: rgba(195, 190, 190, 0.901);
+}
+
+#myList{
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+#myList .li-flex{
+	align-items: center;
+	height: 40px;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+}
+#myList .li-flex .text {
+	cursor: default;
+	padding-left: 10px;
+	height: 100%;
+	line-height: 35px;
+	width: 100%;
+    text-align: start;
+}
+#myList li .delete{
+	width: 35px;
+	height: 100%;
+	line-height: 35px;
+}
+.delete:hover{
+	cursor: pointer;
+	background-color: rgb(70, 70, 70);
+}
+
+@media (max-width: 991.98px) {
+	.wrapper {
+		max-width: 700px;
+	}
+}
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	.wrapper {
+		max-width: 600px;
+	}
+}
+@media (max-width: 480px) {
+	.wrapper {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.header-title {
+		margin-top: 10px;
+	}
+	.form-item {
+		display: flex;
+		justify-content: center;
+		margin: 10px 0 40px 0;
+		height: 30px;
+
+	}
+	#inputArea {
+		font-size: 14px;
+		min-width: 250px;
+		height: 100%;
+		box-shadow: 3px -2px 8px -3px #72a389;
+	}
+	.add {
+		cursor: pointer;
+		font-size: 14px;
+		height: 100%;
+		min-width: 70px;
+	}
+	.form-error{
+		padding-top: 5px;
+		font-size: 13px;
+		color: red;
+	}
+	.add-none-hover {
+		font-size: 14px;
+		height: 100%;
+		min-width: 70px;
+	}
+}
